@@ -2,35 +2,50 @@ import React from "react";
 import Food from "./Food";
 
 
+
+
 const foodILike = [
-  {'name':'pezcado',
+  {
+   'id': 1,
+   'name':'pezcado',
    'properthy':'more product',
+   'rating': 4.5
   },
 
-  {'name':'ternera',
+  {
+    'id': 2,
+    'name':'ternera',
   'properthy':'myaso',
+  'rating': 3.7
   },
 
-  {'name':'pomidor',
+  {
+    'id': 3,
+    'name':'pomidor',
    'properthy':'ovosh',
+   'rating': 2.6
   }
 ]
 
 
+
+
 function App() {
   return (
-       <div >
+
+<div >
 
 
 <h1>Hello</h1>
 
-
 {foodILike.map((obj)=>
-   <Food name={obj.name}
-         properthy={obj.properthy}
-   />
-)}
-
+    <Food
+       key={obj.id}
+       name={obj.name}
+       properthy={obj.properthy}
+       rating={obj.rating}
+                           />
+)};
 
     </div>
   
