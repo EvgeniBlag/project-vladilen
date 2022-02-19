@@ -1,18 +1,24 @@
 import React from "react";
-import{BrowserRouter, Route,Switch} from 'react-router-dom';
+
+function Myname(){
+  return(
+    <h3>My name Evgeny</h3>
+  )
+}
 
 
 
 function App() {
   return (
+       <div >
 
-  <BrowserRouter>
 
-    <div className="container pt-4">
-       <h1>test</h1>
+<h1>Hello</h1>
+
+<Myname/>
+
     </div>
-
-  </BrowserRouter>
+  
   );
 }
 
