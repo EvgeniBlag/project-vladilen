@@ -1,11 +1,20 @@
 import React from "react";
+import Food from "./Food";
 
-function Myname(){
-  return(
-    <h3>My name Evgeny</h3>
-  )
-}
 
+const foodILike = [
+  {'name':'pezcado',
+   'properthy':'more product',
+  },
+
+  {'name':'ternera',
+  'properthy':'myaso',
+  },
+
+  {'name':'pomidor',
+   'properthy':'ovosh',
+  }
+]
 
 
 function App() {
@@ -15,7 +24,13 @@ function App() {
 
 <h1>Hello</h1>
 
-<Myname/>
+
+{foodILike.map((obj)=>
+   <Food name={obj.name}
+         properthy={obj.properthy}
+   />
+)}
+
 
     </div>
   
