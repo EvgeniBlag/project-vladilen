@@ -1,55 +1,35 @@
-import React from "react";
-import Food from "./Food";
+import React,{Component} from 'react';
+import PropTypes from 'prop-types';
 
 
+class App extends React.Component {
 
+  state = {
+    count:0
+  };
 
-const foodILike = [
-  {
-   'id': 1,
-   'name':'pezcado',
-   'properthy':'more product',
-   'rating': 4.5
-  },
+ plus = () =>{
+   console.log('plus');
+ }
 
-  {
-    'id': 2,
-    'name':'ternera',
-  'properthy':'myaso',
-  'rating': 3.7
-  },
-
-  {
-    'id': 3,
-    'name':'pomidor',
-   'properthy':'ovosh',
-   'rating': 2.6
-  }
-]
-
-
-
-
-function App() {
-  return (
-
-<div >
-
-
-<h1>Hello</h1>
-
-{foodILike.map((obj)=>
-    <Food
-       key={obj.id}
-       name={obj.name}
-       properthy={obj.properthy}
-       rating={obj.rating}
-                           />
-)};
-
-    </div>
-  
-  );
+ minus = () =>{
+  console.log('minus');
 }
 
-export default App;
+  render(){
+  return(
+    <div>
+
+     <h1>Ваше число:{this.state.count}</h1>
+     <button onClick={this.plus}>Plus</button>
+     <button onClick={this.minus}>Minus</button>
+    </div>
+  );
+
+   
+
+
+  }
+}
+
+export default App ;
